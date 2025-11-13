@@ -5,6 +5,7 @@
   "homepage": "https://bhagyalakshan.github.io/Myportfolio",
   "scripts": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
     "start": "serve out",
@@ -13,12 +14,17 @@
     "deploy": "gh-pages -d out"
   },
 =======
+=======
+>>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
   "dev": "next dev",
   "build": "next build && next export",
   "start": "serve out",
   "lint": "eslint ."
 }
 ,
+<<<<<<< HEAD
+>>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
+=======
 >>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
