@@ -13,24 +13,24 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/dd.png', // 👈 local image for your tab icon
-        type: 'image/png',
+        url: '/prop1.jpg', // 👈 local image for your tab icon
+        type: 'image/jpg',
         sizes: '32x32',
       },
       {
-        url: '/icon-light-32x32.png',
+        url: '/prop1.jpg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/prop1.jpg',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/prop1.jpg',
+        type: 'image/jpg',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: 'prop1.jpg',
   },
 };
 
