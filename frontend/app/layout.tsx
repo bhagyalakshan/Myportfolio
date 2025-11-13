@@ -7,30 +7,26 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Bhagya Lakshan - Portfolio',
-  description: 'Created by bhagya lakshan',
+  title: 'Bhagya Lakshan',
+  description: 'Created by Bhagya Lakshan',
   generator: 'Bhagya Lakshan Portfolio',
   icons: {
     icon: [
       {
-        url: '/prop1.jpg', // 👈 local image for your tab icon
-        type: 'image/jpg',
+        url: '/prop1.png', // use circular PNG
+        type: 'image/png',
         sizes: '32x32',
       },
       {
-        url: '/prop1.jpg',
+        url: '/prop1.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/prop1.jpg',
+        url: '/prop1.png',
         media: '(prefers-color-scheme: dark)',
       },
-      {
-        url: '/prop1.jpg',
-        type: 'image/jpg',
-      },
     ],
-    apple: 'prop1.jpg',
+    apple: '/prop1.png',
   },
 };
 
