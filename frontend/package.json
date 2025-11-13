@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://bhagyalakshan.github.io/Myportfolio",
   "scripts": {
+<<<<<<< HEAD
     "dev": "next dev",
     "build": "next build",
     "start": "serve out",
@@ -11,6 +12,14 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
+=======
+  "dev": "next dev",
+  "build": "next build && next export",
+  "start": "serve out",
+  "lint": "eslint ."
+}
+,
+>>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.10.0",
