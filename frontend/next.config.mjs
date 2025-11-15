@@ -8,6 +8,7 @@ const nextConfig = {
   },
   // Enable static HTML export
   output: 'export',
+  // GitHub Pages base path
+  basePath: '/Myportfolio',
 }
-
 export default nextConfig
