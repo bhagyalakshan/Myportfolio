@@ -25,37 +25,24 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // Frontend-only submit handler
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("sending")
     setNotification("")
 
-    try {
-      const response = await fetch("http://localhost:8080/api/contact/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setStatus("success")
-        setNotification("✅ Your message has been sent successfully!")
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      } else {
-        setStatus("error")
-        setNotification("❌ Failed to send message. Please try again later.")
-      }
-    } catch (err) {
-      console.error(err)
-      setStatus("error")
-      setNotification("❌ Failed to send message. Please check your connection and try again.")
-    }
-
-    // Hide notification after 4 seconds
+    // Simulate sending
     setTimeout(() => {
-      setStatus("idle")
-      setNotification("")
-    }, 4000)
+      setStatus("success")
+      setNotification("✅ Your message has been noted! (Backend disabled)")
+      setFormData({ name: "", email: "", subject: "", message: "" })
+
+      // Hide notification after 4 seconds
+      setTimeout(() => {
+        setStatus("idle")
+        setNotification("")
+      }, 4000)
+    }, 1000)
   }
 
   return (
@@ -85,7 +72,6 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {/* Notification Message */}
             {notification && (
               <div
                 className={`mb-5 px-4 py-3 rounded-lg text-sm font-medium ${
@@ -171,9 +157,7 @@ export default function Contact() {
                 {status === "sending"
                   ? "Sending..."
                   : status === "success"
-                  ? "Message Sent!"
-                  : status === "error"
-                  ? "Failed to Send"
+                  ? "Message Noted!"
                   : "Send Message"}
               </motion.button>
             </form>
