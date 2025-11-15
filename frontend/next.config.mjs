@@ -2,7 +2,7 @@
 const nextConfig = {
   ...(process.env.NODE_ENV === "production" && {
     output: "export",
-    basePath: "/Myportfolio",
+    basePath: "/Myportfolio/",
     assetPrefix: "/Myportfolio/",
   }),
 };
