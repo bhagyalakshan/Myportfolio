@@ -4,36 +4,24 @@
   "private": true,
   "homepage": "https://bhagyalakshan.github.io/Myportfolio",
   "scripts": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "serve out",
     "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
-=======
-=======
->>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
-  "dev": "next dev",
-  "build": "next build && next export",
-  "start": "serve out",
-  "lint": "eslint ."
-}
-,
-<<<<<<< HEAD
->>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
-=======
->>>>>>> a3551ee (fix: update build script to include export step for proper deployment)
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.10.0",
+    "@vercel/analytics": "^1.0.0",
+    "framer-motion": "^12.23.24",
     "next": "^16.0.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
